@@ -151,9 +151,8 @@ MonoBehaviour:
   waveConfigs:
   - {fileID: 11400000, guid: 6d6a3d4d0ef58534594a6e8004285374, type: 2}
   - {fileID: 11400000, guid: 4d17152b72fe001438564d4aad746c83, type: 2}
-  - {fileID: 11400000, guid: 6d6a3d4d0ef58534594a6e8004285374, type: 2}
-  - {fileID: 11400000, guid: 4d17152b72fe001438564d4aad746c83, type: 2}
-  timeBetweenWaves: 2
+  timeBetweenWaves: 0
+  isLooping: 1
 --- !u!4 &435503468
 Transform:
   m_ObjectHideFlags: 0
@@ -314,18 +313,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3365055057208128113, guid: 41d2f17ec442b9f41bbc799a8e0e35e3, type: 3}
-      propertyPath: topPadding
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3365055057208128113, guid: 41d2f17ec442b9f41bbc799a8e0e35e3, type: 3}
-      propertyPath: bottomPadding
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4072253734043370695, guid: 41d2f17ec442b9f41bbc799a8e0e35e3, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5089685124105460106, guid: 41d2f17ec442b9f41bbc799a8e0e35e3, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 5711948372892099314, guid: a1af61b43ce89244e8ad5fe3b2881216, type: 3}
     - target: {fileID: 8569914049710985773, guid: 41d2f17ec442b9f41bbc799a8e0e35e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.26
