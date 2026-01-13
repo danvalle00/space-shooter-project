@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -8627408038770755388}
   - component: {fileID: 858504309762922927}
   - component: {fileID: 5093937867756798738}
-  - component: {fileID: -3624750260257117263}
   - component: {fileID: 7186758928857351596}
   m_Layer: 7
   m_Name: Enemy
@@ -126,19 +125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthControl
   health: 15
---- !u!114 &-3624750260257117263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 285244813313548539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43c0d51ba69d2c64fad8c91456fdf6a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DamageDealer
-  damageAmount: 25
+  hitEffect: {fileID: 7995031186906817843, guid: 3318de93c5d75b84ab871b0d3c25471b, type: 3}
+  shouldShake: 0
 --- !u!114 &7186758928857351596
 MonoBehaviour:
   m_ObjectHideFlags: 0

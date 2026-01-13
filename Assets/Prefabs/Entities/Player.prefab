@@ -9,11 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8569914049710985773}
-  - component: {fileID: 3365055057208128113}
   - component: {fileID: 6273148697289410335}
   - component: {fileID: -8047342914921123647}
   - component: {fileID: 5933394381022317519}
+  - component: {fileID: 3365055057208128113}
   - component: {fileID: 2802506952718259597}
+  - component: {fileID: 5089685124105460106}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -37,23 +38,6 @@ Transform:
   - {fileID: 3142581263552149542}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3365055057208128113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4072253734043370695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9afc768cdae7c4a49ae434c5e44163a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  moveSpeed: 10
-  leftPadding: 1
-  rightPadding: 1
-  topPadding: 7
-  bottomPadding: 1
 --- !u!50 &6273148697289410335
 Rigidbody2D:
   serializedVersion: 5
@@ -130,6 +114,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthControl
   health: 50
+  hitEffect: {fileID: 7995031186906817843, guid: 3318de93c5d75b84ab871b0d3c25471b, type: 3}
+  shouldShake: 1
+--- !u!114 &3365055057208128113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4072253734043370695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9afc768cdae7c4a49ae434c5e44163a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  moveSpeed: 10
+  leftPadding: 1
+  rightPadding: 1
+  topPadding: 7
+  bottomPadding: 1
 --- !u!114 &2802506952718259597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +145,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea21193bd918bc439ab20fbf1ecd034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &5089685124105460106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4072253734043370695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80592b45a6a60224780ee7f6ef3b8927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shooter
+  projectilePrefab: {fileID: 5711948372892099314, guid: a1af61b43ce89244e8ad5fe3b2881216, type: 3}
+  baseFireRate: 0.2
+  projectileLifetime: 3
+  useAI: 0
+  fireRateVariance: 0
+  minimumFireRate: 0.2
+  IsFiring: 0
 --- !u!1 &7271603755037803184
 GameObject:
   m_ObjectHideFlags: 0
