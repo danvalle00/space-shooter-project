@@ -10,15 +10,14 @@ public class HealthControl : MonoBehaviour
     [SerializeField] private bool shouldShake = false;
 
     private CameraShake cameraShake;
-    private AudioManager audioManager;
     private ScoreManager scoreManager;
-
+    private LevelManager levelManager;
 
     private void Start()
     {
         cameraShake = Camera.main.GetComponent<CameraShake>();
-        audioManager = FindFirstObjectByType<AudioManager>();
         scoreManager = FindFirstObjectByType<ScoreManager>();
+        levelManager = FindFirstObjectByType<LevelManager>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -28,7 +27,7 @@ public class HealthControl : MonoBehaviour
             TakeDamage(damageDealer.GetDamageAmount());
             damageDealer.Hit();
             PlayHitEffect();
-            audioManager.PlayDamageSound();
+            AudioManager.Instance.PlayDamageSound();
 
             if (shouldShake && cameraShake != null)
             {
@@ -49,7 +48,11 @@ public class HealthControl : MonoBehaviour
 
     private void Die()
     {
-        if (!isPlayer)
+        if (isPlayer)
+        {
+            levelManager.LoadGameOver();
+        }
+        else
         {
             scoreManager.ModifyScore(scoreValue);
         }

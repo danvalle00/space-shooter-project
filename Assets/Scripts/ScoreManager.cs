@@ -2,8 +2,26 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     private int playerScore = 0;
+    public static ScoreManager Instance { get; private set; }
 
+    private void SingletonManager()
+    {
+        if (Instance != null)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
 
+    private void Awake()
+    {
+        SingletonManager();
+    }
     public int GetScore()
     {
         return playerScore;

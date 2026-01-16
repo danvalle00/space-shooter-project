@@ -11,6 +11,27 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip damageClip;
     [SerializeField, Range(0f, 1f)] private float damageVolume = 1f;
 
+    public static AudioManager Instance { get; private set; }
+
+    private void SingletonManager()
+    {
+        if (Instance != null)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
+    private void Awake()
+    {
+        SingletonManager();
+    }
+
     public void PlayShootingSound()
     {
         PlayAudioClip(shootingSFX, shootingVolume);
